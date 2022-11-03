@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In order to see the website working, the API provided by the teacher must be online, otherwise you won^t be able to see the website, although the code is fine.
 
 ## Available Scripts
 
