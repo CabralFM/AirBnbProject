@@ -1,0 +1,41 @@
+.Search {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: auto auto 100px;
+
+
+  .pesquisa input {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    width: 100%;
+
+
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    color: grey;
+  }
+
+  .paginacao{
+    max-width: 600px;
+    margin: 30px 50px 50px;
+    text-decoration: underline #004f63;
+    color: #004f63;
+    font-size: larger;
+
+
+      &:hover {
+        color: dodgerblue;
+        text-decoration: underline dodgerblue;
+      }
+    }
+  }
+
+

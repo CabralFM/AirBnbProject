@@ -1,0 +1,106 @@
+.Navegacao {
+
+
+  .Container {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-top: 3px #004f63 solid;
+    background-color: #fefefe;
+    opacity: 0.8;
+
+
+    .div-home a {
+      display: flex;
+      height: 100%;
+    }
+
+    .div-search, .div-favoritos {
+      flex: 1;
+
+      a {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #004f63;
+
+        &.active {
+          color: white;
+          background: #004f63;
+
+
+          .icons {
+            color: white;
+          }
+
+          .div-home {
+            background: white;
+          }
+        }
+
+        &.link-favoritos {
+          img {
+            width: 50px;
+          }
+
+          .fav-white {
+            display: none;
+          }
+
+          &.active {
+            .fav-white {
+              display: block;
+            }
+
+            .fav-color {
+              display: none;
+            }
+          }
+        }
+
+        .icons {
+          font-size: 50px
+        }
+
+        .casa {
+          padding-bottom: 30px;
+          font-size: 50px;
+        }
+
+
+        &:hover {
+          color: #004f63;
+        }
+
+        .home {
+          height: 1px;
+
+
+        }
+
+      }
+    }
+
+    .div-home {
+      position: absolute;
+      bottom: 0;
+      left: 40%;
+
+
+
+      img {
+        height: 120px;
+      }
+    }
+
+
+    .faSearch, .faHeart {
+      height: 30px;
+    }
+  }
+}

@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "369fb42d-14d2-4f1d-99ec-f5bd357eda69",
+		"name": "UPbnb",
+		"description": "Coleção de endpoints e requests do Postman para a API de ligação com o servidor do UPbnb para o projeto do módulo 9.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar Casas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/casas?page=1&limit=8",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"casas"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "(Opcional) Default: 1"
+						},
+						{
+							"key": "limit",
+							"value": "8",
+							"description": "(Opcional) Default: 8"
+						},
+						{
+							"key": "search",
+							"value": "frança",
+							"description": "(Opcional)",
+							"disabled": true
+						},
+						{
+							"key": "ids",
+							"value": "1,17,33",
+							"description": "(Opcional) Lista de IDs de casas, separados por vírgulas",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Endpoint que óbtem uma lista de casas/anúncios do UPbnb, com alguns campos necessários para as listagens e filtros.\r\nPermite receber os parâmetros de \"page\" (default: 1), \"limit\" (default: 8) e \"search\", bem como um \"ids\" que contém uma lista de ids de casas separadas por vírgula, para a paginação e filtragem."
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhes da Casa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/casas/:id_casa",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"casas",
+						":id_casa"
+					],
+					"variable": [
+						{
+							"key": "id_casa",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Recebe como parâmetro do URL o ID da casa e devolve os detalhes básicos da casa."
+			},
+			"response": []
+		},
+		{
+			"name": "Anfitrião da Casa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/casas/:id_casa/host",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"casas",
+						":id_casa",
+						"host"
+					],
+					"variable": [
+						{
+							"key": "id_casa",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Recebe como parâmetro do URL o ID da casa e devolve os detalhes do anfitrião da casa."
+			},
+			"response": []
+		},
+		{
+			"name": "Fotografias da Casa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/casas/:id_casa/photos",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"casas",
+						":id_casa",
+						"photos"
+					],
+					"variable": [
+						{
+							"key": "id_casa",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Recebe como parâmetro do URL o ID da casa e devolve a lista completa de fotografias da casa."
+			},
+			"response": []
+		},
+		{
+			"name": "Regras/Comodidades da Casa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/casas/:id_casa/features",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"casas",
+						":id_casa",
+						"features"
+					],
+					"variable": [
+						{
+							"key": "id_casa",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Recebe como parâmetro do URL o ID da casa e devolve a lista de regras e comodidades da casa."
+			},
+			"response": []
+		},
+		{
+			"name": "Comentários da Casa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/casas/:id_casa/reviews",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"casas",
+						":id_casa",
+						"reviews"
+					],
+					"variable": [
+						{
+							"key": "id_casa",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Recebe como parâmetro do URL o ID da casa e devolve a lista de comentários/reviews da casa."
+			},
+			"response": []
+		},
+		{
+			"name": "Obter Reservas Atuais",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/casas/current",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"casas",
+						"current"
+					]
+				},
+				"description": "Endpoint para listar as casas com reservas ainda por decorrer, com dados para a card da casa e com uma data (time)."
+			},
+			"response": []
+		},
+		{
+			"name": "Obter Reservas Passadas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/casas/past",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"casas",
+						"past"
+					]
+				},
+				"description": "Endpoint para listar as casas com reservas passadas, com dados para a card da casa e com uma data (time)."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://m9-frontend.upskill.appx.pt/upbnb"
+		}
+	]
+}
