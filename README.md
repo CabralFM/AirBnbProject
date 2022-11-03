@@ -1,7 +1,10 @@
 # Getting Started with Create React App
 
+Open/click on the folowing link [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+In order to see the website working, the API provided by the teacher must be online, otherwise you won`t be able to see the website, although the code is fine.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-In order to see the website working, the API provided by the teacher must be online, otherwise you won^t be able to see the website, although the code is fine.
 
 ## Available Scripts
 
